@@ -1,6 +1,6 @@
 <template>
     <div class="text-center sm:text-center mx-auto">
-        <div class="text-center sm:text-center text-white text-9xl w-64 mt-64 mx-auto left-0.5"><img src="public/eFlag.svg"/></div>
+        <div class="text-center sm:text-center text-white text-9xl w-64 mt-64 mx-auto left-0.5"><img src="eFlag.svg"/></div>
         <div class="text-center sm:text-center mt-8 flex lg:mt-0 lg:flex-shrink-0 mx-auto">
             <span class="type"><b class="text-green font-bold text-5xl">hacker.<b class="text-pink  font-bold text-5xl">&nbsp;capture.</b>&nbsp;flag.</b>
             </span></div>

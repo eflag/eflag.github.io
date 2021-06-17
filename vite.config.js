@@ -6,7 +6,7 @@ export default defineConfig({
   base: '',
   build: {
       rollupOptions: {
-        external: [ 'public/eFlag.svg' ]
+        external: [ 'eFlag.svg' ]
       },
   },
   plugins: [vue()]
