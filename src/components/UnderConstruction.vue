@@ -1,6 +1,6 @@
 <template>
     <div class="text-center sm:text-center mx-auto">
-        <div class="text-center sm:text-center text-white text-9xl w-64 mt-64 mx-auto left-0.5"><img :src="logo"/></div>
+        <div class="text-center sm:text-center text-white text-9xl w-64 mt-64 mx-auto left-0.5 "><img :src="logo"/></div>
         <div class="text-center sm:text-center mt-8 flex lg:mt-0 lg:flex-shrink-0 mx-auto">
             <span class="type"><b class="text-green font-bold text-5xl">hacker.<b class="text-pink  font-bold text-5xl">&nbsp;capture.</b>&nbsp;flag.</b>
             </span></div>
@@ -34,32 +34,32 @@ import logo from '/eFlag.svg'
 
 <style scoped>
 .type{
-  border-right: 1px solid rgba(255, 255, 255);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4rem;
-  white-space: nowrap;
-  overflow: hidden;
-  height: 4rem;
-  animation: blinkcursor 500ms steps(40) infinite normal, 
+    border-right: 1px solid rgba(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 4rem;
+    animation: blinkcursor 500ms steps(40) infinite normal, 
     typing 6s steps(45) normal;
 }
 
 @keyframes blinkcursor {
-  from{
-    border-right-color: rgba(255, 255, 255);
-  }
-  to{
-    border-right-color: transparent ;
-  }
+    from{
+        border-right-color: rgba(255, 255, 255);
+    }
+    to{
+        border-right-color: transparent ;
+    }
 }
 
 @keyframes typing {
-  from{
-   width: 0;
-  }
-  to{
-    width: 30rem;
-  }
+    from{
+        width: 0;
+    }
+    to{
+        width: 30rem;
+    }
 }
 </style>
