@@ -1,0 +1,28 @@
+<footer class="eks-footer">
+  <div class="page">
+    <div class="eks-foot-grid">
+      <div class="eks-foot-brand">
+        <div class="eks-brand"><img src="/assets/flag-color.png" width="20" height="20" alt="eflag" style="display:block"> eflag</div>
+        <p>Application Security Labs. Serviços, pesquisa e produtos para times de engenharia que tratam segurança como disciplina.</p>
+      </div>
+      <div class="eks-foot-col">
+        <h4>Produtos</h4>
+        <a href="/produtos/">eflag Review</a>
+        <a href="/produtos/">eflag Supply Chain Guard</a>
+      </div>
+      <div class="eks-foot-col">
+        <h4>Conteúdo</h4>
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">github.com/eflag</a>
+      </div>
+      <div class="eks-foot-col">
+        <h4>eFlag</h4>
+        <a href="/sobre/">Sobre</a>
+        <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+      </div>
+    </div>
+    <div class="eks-foot-bottom">
+      <span>© {{ now.Year }} eFlag Application Security Labs</span>
+      <span>eflagsec.io · São Paulo, Brasil</span>
+    </div>
+  </div>
+</footer>

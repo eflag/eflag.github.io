@@ -1,0 +1,88 @@
+{{/* Posições fixas dos 5 nós num anel (cx=320, cy=200, r=140, começando no topo).
+     Geometria estática para funcionar sem JS; lab.js anima por cima. */}}
+{{ $pts := slice
+  (dict "x" 320.0 "y" 60.0  "lx" 0.0   "ly" -38.0 "anchor" "middle")
+  (dict "x" 453.2 "y" 156.7 "lx" 36.0  "ly" 4.0   "anchor" "start")
+  (dict "x" 402.3 "y" 313.3 "lx" 22.0  "ly" 40.0  "anchor" "middle")
+  (dict "x" 237.7 "y" 313.3 "lx" -22.0 "ly" 40.0  "anchor" "middle")
+  (dict "x" 186.8 "y" 156.7 "lx" -36.0 "ly" 4.0   "anchor" "end")
+}}
+{{ $nodes := hugo.Data.lab }}
+{{ $n := len $nodes }}
+<section class="eks-section eks-lab" id="lab" style="background:var(--elevated)">
+  <div class="page">
+    <div class="eks-section-head">
+      <span class="eks-section-kicker">Pesquisa &amp; desenvolvimento</span>
+    </div>
+    <h2 class="eks-section-title">Não somos consultoria. Somos laboratório.</h2>
+    <p class="eks-section-sub">A inteligência que acumulamos atendendo clientes alimenta diretamente nosso trabalho de P&amp;D. Cada cliente nos torna melhores em identificar padrões. Cada padrão vira pesquisa, ferramenta ou produto.</p>
+
+    <div class="eks-lab-loop">
+      <div class="eks-lab-svg-wrap">
+        <div class="eks-lab-caption">Modelo de operação · ciclo contínuo</div>
+        <svg viewBox="0 0 640 400" class="eks-lab-svg" id="lab-svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          {{/* Segmentos do anel */}}
+          {{ range $i, $p := $pts }}
+            {{ $next := index $pts (mod (add $i 1) $n) }}
+            <line class="lab-seg" data-seg="{{ $i }}"
+                  x1="{{ $p.x }}" y1="{{ $p.y }}" x2="{{ $next.x }}" y2="{{ $next.y }}"
+                  stroke="var(--border)" stroke-width="1.5" stroke-dasharray="3 4"
+                  style="transition:stroke 400ms var(--ease-out)"/>
+          {{ end }}
+
+          {{/* Pulse no nó ativo */}}
+          <circle id="lab-pulse" cx="{{ (index $pts 0).x }}" cy="{{ (index $pts 0).y }}" r="22"
+                  fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.55">
+            <animate attributeName="r" from="22" to="44" dur="2.4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.55" to="0" dur="2.4s" repeatCount="indefinite"/>
+          </circle>
+
+          {{/* Glow + dot viajante */}}
+          <circle id="lab-glow" cx="{{ (index $pts 0).x }}" cy="{{ (index $pts 0).y }}" r="22" fill="url(#dotGlow)"/>
+          <circle id="lab-dot" class="eks-lab-dot" cx="{{ (index $pts 0).x }}" cy="{{ (index $pts 0).y }}" r="6" fill="var(--accent)"/>
+
+          {{/* Nós */}}
+          {{ range $i, $p := $pts }}
+            {{ $isFinal := eq $i (sub $n 1) }}
+            <g class="eks-lab-node lab-node" data-node="{{ $i }}" transform="translate({{ $p.x }},{{ $p.y }})" style="cursor:pointer">
+              <circle class="lab-node-ring" r="18"
+                      fill="{{ if $isFinal }}var(--fg1){{ else }}var(--surface){{ end }}"
+                      stroke="var(--border)" stroke-width="1.5"
+                      style="transition:all 360ms cubic-bezier(.2,.8,.2,1)"/>
+              <text text-anchor="middle" y="4" font-size="11" font-family="var(--mono)" font-weight="600"
+                    fill="{{ if $isFinal }}var(--surface){{ else }}var(--fg1){{ end }}">{{ printf "%02d" (add $i 1) }}</text>
+              <text class="lab-node-label" text-anchor="{{ $p.anchor }}" x="{{ $p.lx }}" y="{{ $p.ly }}"
+                    font-size="13" font-family="var(--font)" font-weight="600" fill="var(--fg2)"
+                    style="transition:fill 360ms;letter-spacing:-.005em">{{ (index $nodes $i).label }}</text>
+            </g>
+          {{ end }}
+        </svg>
+      </div>
+
+      <div class="eks-lab-detail">
+        <div class="eks-lab-detail-step" id="lab-step">Etapa 01 de {{ printf "%02d" $n }}</div>
+        <h3 class="eks-lab-detail-h" id="lab-title">{{ (index $nodes 0).label }}</h3>
+        <p class="eks-lab-detail-body" id="lab-body">{{ (index $nodes 0).desc }}</p>
+        <p class="eks-lab-detail-foot">
+          É um ciclo, não uma linha reta. Diferente de empresas puramente de produto, sabemos exatamente qual dor o cliente sente, porque estamos com ele no dia a dia.
+        </p>
+        <div class="eks-lab-pager" id="lab-pager">
+          {{ range $i, $p := $pts }}
+            <button class="eks-lab-pager-dot{{ if eq $i 0 }} active{{ end }}" data-pager="{{ $i }}" aria-label="Ver etapa {{ add $i 1 }}"></button>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{/* Dados dos nós para o JS (label + desc). O html/template do Go serializa
+         a estrutura para JSON válido automaticamente neste contexto de script. */}}
+    <script>window.LAB_NODES = {{ $nodes }};</script>
+  </div>
+</section>

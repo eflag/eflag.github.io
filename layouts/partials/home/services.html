@@ -1,0 +1,21 @@
+<section class="eks-section" id="servicos">
+  <div class="page">
+    <div class="eks-section-head">
+      <span class="eks-section-kicker">Serviços profissionais</span>
+    </div>
+    <h2 class="eks-section-title">Diagnóstico, contínuo, sob medida.</h2>
+    <p class="eks-section-sub">Engajamentos pontuais ou modelo recorrente. O time se adapta ao seu ritmo de release, não o contrário.</p>
+
+    <div class="eks-services">
+      <div class="ef-ed-grid">
+        {{ range hugo.Data.services }}
+          <div class="ef-ed-card{{ with .tint }} idx-{{ . }}{{ end }}">
+            <div class="ef-ed-idx">{{ .idx }}</div>
+            <div class="ef-ed-title">{{ .title }}</div>
+            <div class="ef-ed-body">{{ .body }}</div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

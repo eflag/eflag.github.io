@@ -1,0 +1,12 @@
+- norm: "ISO/IEC 27001 · Anexo A.14"
+  req: "Política de desenvolvimento seguro integrada ao SDLC. Separação de ambientes e revisão de código como controles obrigatórios."
+  deadline: "Vigente"
+  urgent: false
+- norm: "PCI DSS 4.0 · Requisito 6"
+  req: "SSDLC explícito como requisito. Versão 4.0 retira a categoria de boa prática recomendada. Passa a ser obrigatório."
+  deadline: "Vigente"
+  urgent: false
+- norm: "BACEN CMN 5.274 · BCB 538"
+  req: "Pentest anual obrigatório de aplicações expostas, gestão de vulnerabilidades e modelo proativo para instituições reguladas."
+  deadline: "Março 2026"
+  urgent: true

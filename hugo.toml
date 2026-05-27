@@ -1,0 +1,28 @@
+baseURL = "https://eflag.io/"
+languageCode = "pt-BR"
+title = "eFlag · Application Security Labs"
+enableRobotsTXT = true
+
+# Site institucional: sem taxonomias (tags/categories) por enquanto.
+disableKinds = ["taxonomy", "term"]
+
+# Conteúdo do design é HTML/JSX bruto; permitimos HTML inline no markdown.
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = "Um laboratório que une serviços profissionais, pesquisa técnica e desenvolvimento de produtos de Application Security."
+  email = "contato@eflagsec.io"
+  github = "https://github.com/eflag"
+
+# Menu principal — só as páginas em escopo nesta fase.
+[[menu.main]]
+  identifier = "produtos"
+  name = "Produtos"
+  url = "/produtos/"
+  weight = 10
+[[menu.main]]
+  identifier = "sobre"
+  name = "Sobre"
+  url = "/sobre/"
+  weight = 20

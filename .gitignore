@@ -1,5 +1,7 @@
-node_modules
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# OS
 .DS_Store
-dist
-dist-ssr
-*.local

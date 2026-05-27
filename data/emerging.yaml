@@ -1,0 +1,16 @@
+- tag: "Supply Chain Security"
+  title: "Visibilidade sobre o que entra no build."
+  body: "Ataques à cadeia de desenvolvimento são uma das maiores ameaças atuais e seguem crescendo. Quem não vê dependências, pipelines e repositórios em produção fica refém do próximo incidente público."
+  list:
+    - "Auditoria de dependências e SBOM CycloneDX"
+    - "Build provenance e SLSA Level 2/3"
+    - "Detecção de typosquatting e pacotes maliciosos"
+    - "Governança de repositórios e GitHub Actions"
+- tag: "Segurança com IA"
+  title: "Proteção para quem usa LLM, e para quem constrói com LLM."
+  body: "Dois lados: proteção de aplicações que usam IA generativa (prompt injection, vazamento, manipulação de agentes) e segurança no uso diário de copilots pelos times de dev. Só quem entende o fluxo real consegue proteger esse vetor."
+  list:
+    - "Threat modeling de fluxos com LLM"
+    - "Guardrails de agentes com acesso a ferramentas"
+    - "Políticas de uso seguro de copilots no dev"
+    - "Avaliação de exfiltração via context window"

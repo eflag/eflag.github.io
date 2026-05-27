@@ -1,0 +1,196 @@
+/* ============================================================
+   eFlag · colors_and_type.css · v4, Cold Lab
+   Cool whites, slate neutrals, Geist + Geist Mono.
+   The logo colors (cyan/green/magenta) carry into the UI through
+   chips, dots and toned text. The gradient itself only appears in
+   the logo mark and a 1px hairline at the top of a section.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ── BACKGROUNDS, cool whites & slate (no warm/beige) */
+  --bg:            #f4f6f8; /* page */
+  --surface:       #ffffff; /* cards, inputs */
+  --elevated:      #eaeef2; /* subtle elevation, chips */
+  --sunken:        #e3e7ec; /* keyboard, table headers, hover wells */
+  --dark-bg:       #0a0c10; /* dark sections */
+  --dark-surface:  #13151a;
+  --dark-elevated: #1d2129;
+
+  /* ── BORDERS */
+  --border:        #d8dde3;
+  --border-hover:  #b7bec7;
+  --dark-border:   #1d2129;
+  --dark-border-hover: #2b3038;
+
+  /* ── TEXT (light) */
+  --fg1: #0a0c10;
+  --fg2: #4a5260;
+  --fg3: #7a838f;
+  --fg4: #a8b0ba;
+  --text:    var(--fg1);
+  --text-2:  var(--fg2);
+  --text-3:  var(--fg3);
+  --text-4:  var(--fg4);
+
+  /* ── TEXT (dark) */
+  --dark-fg1: #f5f6f8;
+  --dark-fg2: #9aa1ac;
+  --dark-fg3: #5a606a;
+  --dark-text:   var(--dark-fg1);
+  --dark-text-2: var(--dark-fg2);
+  --dark-text-3: var(--dark-fg3);
+
+  /* ── BRAND · vivid (mark only)
+     The neon form of the logo trio. Reserve for the logo mark,
+     small "atom" dots (≤8px), and rare solid-color labels.
+     NEVER as a button fill, large block, or body text color. */
+  --cyan:        #00f5d4;
+  --green:       #00e76a;
+  --magenta:     #ff2dd4;
+
+  /* ── BRAND · toned (text-safe on light)
+     Use for chip text, link emphasis, syntax tokens, indices. */
+  --cyan-fn:     #018f7e;
+  --green-fn:    #018a4f;
+  --magenta-fn:  #a8158a;
+
+  /* ── BRAND · soft bg (chip surface) */
+  --cyan-bg:     #defaf5;
+  --green-bg:    #dff8e8;
+  --magenta-bg: #fbe2f5;
+
+  /* ── ACCENT, the primary functional accent
+     Aliased to --cyan-fn. Used for focus rings, links, the accent
+     button. Legacy --accent-* tokens keep working. */
+  --accent:       var(--cyan-fn);
+  --accent-dark:  #017166;
+  --accent-light: var(--cyan-bg);
+
+  /* ── SEMANTIC */
+  --success:        var(--green-fn);
+  --success-bg:     #e2f5e9;
+  --success-border: #a8dfc0;
+  --warn:           #7a5400;
+  --warn-bg:        #fbf1d8;
+  --warn-border:    #e8d090;
+  --error:          #a51e2e;
+  --error-bg:       #fbe4e6;
+  --error-border:   #e0b0b8;
+  --info:           var(--fg2);
+  --info-bg:        var(--elevated);
+  --info-border:    var(--border);
+
+  /* ── TYPOGRAPHY */
+  --font: 'Geist', system-ui, -apple-system, sans-serif;
+  --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Semantic type tokens. Geist hits its character above 500. */
+  --display-size:   48px;  --display-weight: 600; --display-tracking: -0.04em;  --display-lh: 1.02;
+  --h1-size:        28px;  --h1-weight: 600;      --h1-tracking: -0.025em;     --h1-lh: 1.15;
+  --h2-size:        20px;  --h2-weight: 500;      --h2-tracking: -0.02em;      --h2-lh: 1.25;
+  --h3-size:        16px;  --h3-weight: 500;      --h3-tracking: -0.01em;      --h3-lh: 1.35;
+  --body-size:      15px;  --body-weight: 400;    --body-lh: 1.55;
+  --small-size:     13px;  --small-weight: 400;   --small-lh: 1.5;
+  --label-size:     11px;  --label-weight: 500;   --label-tracking: 0.06em; /* uppercase via .ef-label */
+  --mono-size:      12px;
+
+  /* ── RADII, sharper than v3 (no more 16px) */
+  --r-sm:   4px;
+  --r-md:   6px;
+  --r-lg:   8px;
+  --r-xl:   12px;
+  --r-pill: 100px;
+
+  /* ── SPACING (base 4, unchanged) */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  80px;
+  --sp-10: 96px;
+
+  /* ── ELEVATION (flat-first; borders carry the weight) */
+  --shadow-sm: 0 1px 2px  rgba(10,12,16,0.05);
+  --shadow-md: 0 2px 8px  rgba(10,12,16,0.07);
+  --shadow-lg: 0 8px 24px rgba(10,12,16,0.09);
+
+  /* ── PATTERNS
+     · dots       text-safe; hero & sections with body copy
+     · triangles  no-text; CTAs, metric grids, decorative
+       (stroke now uses the logo gradient at low opacity, so the
+       pattern carries the brand instead of being decorative noise)
+     · hairline   1px ONLY, top-of-section signature. No vertical
+       variant, no 2/3px, the gradient dominates fast in large areas. */
+  --pat-dots:      radial-gradient(circle, rgba(120,135,150,0.28) 1px, transparent 1px);
+  --pat-dots-dark: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  --pat-dots-size: 14px 14px;
+
+  --pat-tri:      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500' width='56' height='56'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f5d4' stop-opacity='0.20'/><stop offset='50%25' stop-color='%2300e76a' stop-opacity='0.18'/><stop offset='100%25' stop-color='%23ff2dd4' stop-opacity='0.20'/></linearGradient></defs><polygon points='325,108 174,259 174,108' fill='none' stroke='url(%23g)' stroke-width='6'/><polygon points='174,108 325,259 174,259' fill='none' stroke='url(%23g)' stroke-width='6'/></svg>");
+  --pat-tri-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500' width='56' height='56'><defs><linearGradient id='gd' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300f5d4' stop-opacity='0.24'/><stop offset='50%25' stop-color='%2300e76a' stop-opacity='0.18'/><stop offset='100%25' stop-color='%23ff2dd4' stop-opacity='0.24'/></linearGradient></defs><polygon points='325,108 174,259 174,108' fill='none' stroke='url(%23gd)' stroke-width='6'/><polygon points='174,108 325,259 174,259' fill='none' stroke='url(%23gd)' stroke-width='6'/></svg>");
+  --pat-tri-size: 56px 56px;
+
+  --grad-logo:      linear-gradient(90deg,  #00f5d4 0%, #00e76a 50%, #ff2dd4 100%);
+  --grad-logo-diag: linear-gradient(135deg, #00f5d4 0%, #00e76a 55%, #ff2dd4 100%);
+
+  /* ── MOTION */
+  --ease-out:  cubic-bezier(.2, .8, .2, 1);
+  --ease-std:  cubic-bezier(.4, 0, .2, 1);
+  --t-fast:    .15s;
+  --t-med:     .25s;
+  --t-slow:    .4s;
+}
+
+/* ── BASE TYPOGRAPHY ──────────────────────────────── */
+html { font-family: var(--font); }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg1);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.ef-display { font-family: var(--font); font-size: var(--display-size); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); line-height: var(--display-lh); }
+.ef-h1      { font-family: var(--font); font-size: var(--h1-size); font-weight: var(--h1-weight); letter-spacing: var(--h1-tracking); line-height: var(--h1-lh); }
+.ef-h2      { font-family: var(--font); font-size: var(--h2-size); font-weight: var(--h2-weight); letter-spacing: var(--h2-tracking); line-height: var(--h2-lh); }
+.ef-h3      { font-family: var(--font); font-size: var(--h3-size); font-weight: var(--h3-weight); letter-spacing: var(--h3-tracking); line-height: var(--h3-lh); }
+.ef-body    { font-family: var(--font); font-size: var(--body-size); font-weight: var(--body-weight); line-height: var(--body-lh); color: var(--fg2); }
+.ef-small   { font-family: var(--font); font-size: var(--small-size); line-height: var(--small-lh); color: var(--fg3); }
+
+/* Mono label, uppercase eyebrow / kicker. */
+.ef-label   {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+.ef-mono    { font-family: var(--mono); font-size: var(--mono-size); color: var(--fg2); }
+
+/* Hairline, the gradient as section signature. 1px only. */
+.ef-hairline { height: 1px; background: var(--grad-logo); border: 0; margin: 0; }
+
+/* Focus ring, cyan, used by all focusable elements via outline. */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+/* ── DARK SCOPE ───────────────────────────────────── */
+.ef-dark, [data-theme="dark"] {
+  background: var(--dark-bg);
+  color: var(--dark-fg1);
+}
+.ef-dark .ef-body  { color: var(--dark-fg2); }
+.ef-dark .ef-small { color: var(--dark-fg3); }
+.ef-dark .ef-label { color: var(--dark-fg3); }

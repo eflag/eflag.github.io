@@ -1,0 +1,21 @@
+<section class="eks-section" id="emergente">
+  <div class="page">
+    <div class="eks-section-head">
+      <span class="eks-section-kicker">Frentes emergentes</span>
+    </div>
+    <h2 class="eks-section-title">Onde o mercado ainda não tem resposta consolidada.</h2>
+    <p class="eks-section-sub">Áreas em que atuamos com pesquisa aplicada, para quem está (ou logo estará) exposto.</p>
+    <div class="eks-emerge">
+      {{ range hugo.Data.emerging }}
+        <div class="eks-emerge-cell">
+          <span class="eks-emerge-tag">{{ .tag }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .body }}</p>
+          <ul class="eks-emerge-list">
+            {{ range .list }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

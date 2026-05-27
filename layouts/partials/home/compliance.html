@@ -1,0 +1,18 @@
+<section class="eks-dark">
+  <div class="page">
+    <div class="eks-section-head">
+      <span class="eks-section-kicker">Por que agora</span>
+    </div>
+    <h2 class="eks-section-title">Conformidade regulatória deixou de ser opcional.</h2>
+    <p class="eks-section-sub">Reguladores brasileiros e padrões internacionais convergem para exigir desenvolvimento seguro auditável. Quem espera, paga em retrabalho.</p>
+    <div class="eks-compl-table">
+      {{ range hugo.Data.compliance }}
+        <div class="eks-compl-row">
+          <div class="eks-compl-norm">{{ .norm }}</div>
+          <div class="eks-compl-req">{{ .req }}</div>
+          <div class="eks-compl-deadline{{ if .urgent }} urgent{{ end }}">{{ .deadline }}</div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

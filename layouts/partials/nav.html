@@ -1,0 +1,14 @@
+<header class="eks-nav">
+  <div class="page eks-nav-inner">
+    <a href="/" class="eks-brand"><img src="/assets/flag-color.png" width="22" height="22" alt="eflag" style="display:block"> eflag</a>
+    <nav class="eks-nav-links">
+      {{ $current := .RelPermalink }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="eks-nav-link{{ if hasPrefix $current .URL }} active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="eks-nav-right">
+      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-sm">Falar com a gente</a>
+    </div>
+  </div>
+</header>
