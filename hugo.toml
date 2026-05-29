@@ -12,7 +12,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Um laboratório que une serviços profissionais, pesquisa técnica e desenvolvimento de produtos de Application Security."
-  email = "contato@eflagsec.io"
+  email = "contato@eflag.io"
   github = "https://github.com/eflag"
 
 # Menu principal — só as páginas em escopo nesta fase.
