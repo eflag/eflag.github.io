@@ -1,11 +1,11 @@
 <section class="eks-cta">
   <div class="page eks-cta-inner">
     <div class="eks-cta-text">
-      <h2 class="eks-cta-h">Pronto para começar pelo diagnóstico?</h2>
-      <p class="eks-cta-sub">15 minutos com um especialista. Sem pré-venda, sem deck genérico. A gente entende o ciclo e propõe o primeiro passo.</p>
+      <h2 class="eks-cta-h">{{ i18n "cta_title" }}</h2>
+      <p class="eks-cta-sub">{{ i18n "cta_sub" }}</p>
     </div>
     <div class="eks-cta-actions">
-      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">Agendar conversa</a>
+      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">{{ i18n "cta_btn" }}</a>
       <span class="ef-btn ef-btn-ghost ef-btn-lg" aria-disabled="true" style="pointer-events:none;cursor:default">{{ .Site.Params.email }}</span>
     </div>
   </div>

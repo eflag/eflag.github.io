@@ -1,0 +1,10 @@
+# English translation of data/pt/problems.yaml. Keep both files in sync.
+- idx: "PROBLEM · 01"
+  title: "Teams can't find the talent."
+  body: "AppSec demands mastery of both security and development. It's a rare, contested and expensive profile. Hiring internally takes 9 to 14 months."
+- idx: "PROBLEM · 02"
+  title: "Tools generate backlog without context."
+  body: "SAST, DAST and SCA pile up findings with no business prioritization. Too many alerts, too little action. Dev teams ignore what matters."
+- idx: "PROBLEM · 03"
+  title: "Security can't keep up."
+  body: "Dev teams ship fast. Security shows up at retest, or not at all. The result is security debt accumulating between sprints."

@@ -1,22 +1,22 @@
 {{ define "main" }}
+  {{ $d := index hugo.Data site.Language.Lang }}
   <section class="eks-hero" style="padding:64px 0 56px">
     <div class="page">
-      <div class="eks-hero-eyebrow">Produtos</div>
-      <h1 class="eks-hero-h" style="font-size:48px;max-width:820px;margin-bottom:16px">Produtos eFlag.</h1>
+      <div class="eks-hero-eyebrow">{{ i18n "prd_eyebrow" }}</div>
+      <h1 class="eks-hero-h" style="font-size:48px;max-width:820px;margin-bottom:16px">{{ i18n "prd_title" }}</h1>
       <p class="eks-hero-sub" style="margin-bottom:0">
-        Ferramentas que automatizam padrões vistos repetidamente nos nossos engajamentos. Cada produto nasce de um problema real, validado em campo antes de virar capacidade comercial.
+        {{ i18n "prd_sub" }}
       </p>
     </div>
   </section>
 
-  {{ $tooltip := "Produto em pesquisa e desenvolvimento internos. Em refinamento ativo com clientes-piloto." }}
-  {{ range hugo.Data.produtos }}
+  {{ range $d.produtos }}
     <section class="prd-section prd-{{ .tint }}" id="produto-{{ .slug }}">
       <div class="page">
         <div class="prd-section-grid">
           <aside class="prd-aside">
             <div class="prd-section-icon">{{ partial (printf "produtos/icon-%s.html" .slug) . }}</div>
-            <span class="prd-tag" tabindex="0" data-tooltip="{{ $tooltip }}">
+            <span class="prd-tag" tabindex="0" data-tooltip="{{ i18n "prd_tooltip" }}">
               Lab
               <i class="ti ti-info-circle" aria-hidden="true"></i>
             </span>
@@ -37,25 +37,25 @@
   <section class="eks-dark">
     <div class="page">
       <div class="eks-section-head">
-        <span class="eks-section-kicker">Modelo de produto</span>
+        <span class="eks-section-kicker">{{ i18n "prd_model_kicker" }}</span>
       </div>
-      <h2 class="eks-section-title">Produto não é pivô. É o ciclo se completando.</h2>
-      <p class="eks-section-sub">A ferramenta nasce quando um problema se repete em vários clientes a ponto de virar dor sistemática. Aí a gente automatiza, dá nome e abre acesso.</p>
+      <h2 class="eks-section-title">{{ i18n "prd_model_title" }}</h2>
+      <p class="eks-section-sub">{{ i18n "prd_model_sub" }}</p>
       <div class="prd-loop">
         <div>
           <div class="prd-loop-num">01</div>
-          <h3>Dor recorrente.</h3>
-          <p>Mesmo achado aparece em três, cinco, dez clientes diferentes. O time interno padroniza a forma de resolver e o tempo cai pela metade.</p>
+          <h3>{{ i18n "prd_loop1_title" }}</h3>
+          <p>{{ i18n "prd_loop1_body" }}</p>
         </div>
         <div>
           <div class="prd-loop-num">02</div>
-          <h3>Ferramenta interna.</h3>
-          <p>O padrão vira script, depois ferramenta de uso interno do time. Roda em todos os engajamentos e absorve casos novos a cada cliente.</p>
+          <h3>{{ i18n "prd_loop2_title" }}</h3>
+          <p>{{ i18n "prd_loop2_body" }}</p>
         </div>
         <div>
           <div class="prd-loop-num">03</div>
-          <h3>Produto comercial.</h3>
-          <p>A ferramenta amadurece, ganha interface e empacotamento. Vira capacidade que o cliente roda sozinho dentro do pipeline dele.</p>
+          <h3>{{ i18n "prd_loop3_title" }}</h3>
+          <p>{{ i18n "prd_loop3_body" }}</p>
         </div>
       </div>
     </div>
@@ -64,11 +64,11 @@
   <section class="eks-cta" id="contato">
     <div class="page eks-cta-inner">
       <div class="eks-cta-text">
-        <h2 class="eks-cta-h">Quer conhecer nossos produtos?</h2>
-        <p class="eks-cta-sub">Entre em contato para estar preparado para essa nova era de segurança em IA e supply chain attacks.</p>
+        <h2 class="eks-cta-h">{{ i18n "prd_cta_title" }}</h2>
+        <p class="eks-cta-sub">{{ i18n "prd_cta_sub" }}</p>
       </div>
       <div class="eks-cta-actions">
-        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">Falar com a gente</a>
+        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">{{ i18n "prd_cta_btn" }}</a>
         <span class="ef-btn ef-btn-ghost ef-btn-lg" aria-disabled="true" style="pointer-events:none;cursor:default">{{ .Site.Params.email }}</span>
       </div>
     </div>

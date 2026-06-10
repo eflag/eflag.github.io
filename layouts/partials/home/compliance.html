@@ -1,12 +1,13 @@
+{{ $d := index hugo.Data site.Language.Lang }}
 <section class="eks-dark">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">Por que agora</span>
+      <span class="eks-section-kicker">{{ i18n "compl_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">Conformidade regulatória deixou de ser opcional.</h2>
-    <p class="eks-section-sub">Reguladores brasileiros e padrões internacionais convergem para exigir desenvolvimento seguro auditável. Quem espera, paga em retrabalho.</p>
+    <h2 class="eks-section-title">{{ i18n "compl_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "compl_sub" }}</p>
     <div class="eks-compl-table">
-      {{ range hugo.Data.compliance }}
+      {{ range $d.compliance }}
         <div class="eks-compl-row">
           <div class="eks-compl-norm">{{ .norm }}</div>
           <div class="eks-compl-req">{{ .req }}</div>
@@ -14,6 +15,6 @@
         </div>
       {{ end }}
     </div>
-    <p class="eks-compl-foot">Os mesmos frameworks do add-on regulatório dos assessments: contratando o mapeamento, o roadmap técnico já nasce como plano de adequação. <a href="#servicos">Ver serviços de diagnóstico →</a></p>
+    <p class="eks-compl-foot">{{ i18n "compl_foot" }} <a href="#servicos">{{ i18n "compl_foot_link" }}</a></p>
   </div>
 </section>

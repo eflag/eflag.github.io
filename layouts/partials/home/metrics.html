@@ -1,12 +1,13 @@
+{{ $d := index hugo.Data site.Language.Lang }}
 <section class="eks-section" id="mercado">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">Mercado · 2024 → 2033</span>
+      <span class="eks-section-kicker">{{ i18n "metrics_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">A demanda já está aqui.</h2>
-    <p class="eks-section-sub">Dados públicos consolidados de relatórios de mercado e fontes setoriais.</p>
+    <h2 class="eks-section-title">{{ i18n "metrics_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "metrics_sub" }}</p>
     <div class="eks-metrics-grid" style="margin-top:40px">
-      {{ range hugo.Data.metrics }}
+      {{ range $d.metrics }}
         <div class="eks-metric">
           <div class="eks-metric-val">{{ .v }}<sup>{{ .sup }}</sup></div>
           <div class="eks-metric-label">{{ .label }}</div>

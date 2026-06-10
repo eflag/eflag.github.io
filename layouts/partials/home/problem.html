@@ -1,12 +1,13 @@
+{{ $d := index hugo.Data site.Language.Lang }}
 <section class="eks-section" id="problema">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">O que resolvemos</span>
+      <span class="eks-section-kicker">{{ i18n "problem_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">Três problemas simultâneos. Uma resposta.</h2>
-    <p class="eks-section-sub">A camada de aplicação é hoje o maior vetor de ataque. E quem precisa proteger esse vetor enfrenta três limitações ao mesmo tempo.</p>
+    <h2 class="eks-section-title">{{ i18n "problem_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "problem_sub" }}</p>
     <div class="eks-problem-grid">
-      {{ range hugo.Data.problems }}
+      {{ range $d.problems }}
         <div class="eks-problem-cell">
           <div class="eks-problem-idx">{{ .idx }}</div>
           <h3 class="eks-problem-title">{{ .title }}</h3>

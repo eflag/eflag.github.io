@@ -1,24 +1,24 @@
 <section class="eks-hero">
   <div class="page eks-hero-grid">
     <div class="eks-hero-content">
-      <div class="eks-hero-eyebrow">Application Security Labs</div>
+      <div class="eks-hero-eyebrow">{{ i18n "hero_eyebrow" }}</div>
       <h1 class="eks-hero-h">Application security<br>for engineering teams.</h1>
       <p class="eks-hero-sub">
-        Um laboratório que une consultoria especializada, pesquisa técnica e desenvolvimento de produtos. Engajamentos com escopo, método e entrega definidos, do assessment ao ataque real.
+        {{ i18n "hero_sub" }}
       </p>
       <div class="eks-hero-actions">
-        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">Falar com um especialista</a>
-        <a href="/produtos/" class="ef-btn ef-btn-outline ef-btn-lg">Ver produtos →</a>
+        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">{{ i18n "hero_btn_specialist" }}</a>
+        <a href="{{ relLangURL "produtos/" }}" class="ef-btn ef-btn-outline ef-btn-lg">{{ i18n "hero_btn_products" }}</a>
       </div>
 
       <div class="eks-hero-meta" style="grid-template-columns:repeat(2,1fr);max-width:640px">
         <div class="eks-hero-meta-item">
-          <span class="eks-hero-meta-label">Atuação</span>
-          <span class="eks-hero-meta-val">Consultoria · Pesquisa · Produto</span>
+          <span class="eks-hero-meta-label">{{ i18n "hero_meta1_label" }}</span>
+          <span class="eks-hero-meta-val">{{ i18n "hero_meta1_val" }}</span>
         </div>
         <div class="eks-hero-meta-item">
-          <span class="eks-hero-meta-label">Domínios</span>
-          <span class="eks-hero-meta-val">Web · API · LLM · Supply chain</span>
+          <span class="eks-hero-meta-label">{{ i18n "hero_meta2_label" }}</span>
+          <span class="eks-hero-meta-val">{{ i18n "hero_meta2_val" }}</span>
         </div>
       </div>
     </div>

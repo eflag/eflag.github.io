@@ -1,28 +1,53 @@
 baseURL = "https://eflag.io/"
-languageCode = "pt-BR"
 title = "eFlag · Application Security Labs"
 enableRobotsTXT = true
 
 # Site institucional: sem taxonomias (tags/categories) por enquanto.
 disableKinds = ["taxonomy", "term"]
 
+# Bilíngue: pt na raiz, en em /en/. Strings de template em i18n/,
+# dados por idioma em data/{pt,en}/.
+defaultContentLanguage = "pt"
+
+[languages.pt]
+  languageCode = "pt-BR"
+  languageName = "Português"
+  weight = 1
+  [languages.pt.params]
+    description = "Application Security Lab brasileiro: assessments de maturidade de AppSec e IA, AppSec Engineering, pentest web, API e LLM, secure code review e treinamento de devs. Consultoria, pesquisa e produtos."
+  [[languages.pt.menus.main]]
+    identifier = "produtos"
+    name = "Produtos"
+    pageRef = "/produtos"
+    weight = 10
+  [[languages.pt.menus.main]]
+    identifier = "sobre"
+    name = "Sobre"
+    pageRef = "/sobre"
+    weight = 20
+
+[languages.en]
+  languageCode = "en-US"
+  languageName = "English"
+  weight = 2
+  [languages.en.params]
+    description = "Brazilian Application Security Lab: AppSec and AI maturity assessments, AppSec Engineering, web, API and LLM pentesting, secure code review and developer training. Consulting, research and products."
+  [[languages.en.menus.main]]
+    identifier = "produtos"
+    name = "Products"
+    pageRef = "/produtos"
+    weight = 10
+  [[languages.en.menus.main]]
+    identifier = "sobre"
+    name = "About"
+    pageRef = "/sobre"
+    weight = 20
+
 # Conteúdo do design é HTML/JSX bruto; permitimos HTML inline no markdown.
 [markup.goldmark.renderer]
   unsafe = true
 
+# Params compartilhados entre idiomas.
 [params]
-  description = "Application Security Lab brasileiro: assessments de maturidade de AppSec e IA, AppSec Engineering, pentest web, API e LLM, secure code review e treinamento de devs. Consultoria, pesquisa e produtos."
   email = "contato@eflag.io"
   github = "https://github.com/eflag"
-
-# Menu principal — só as páginas em escopo nesta fase.
-[[menu.main]]
-  identifier = "produtos"
-  name = "Produtos"
-  url = "/produtos/"
-  weight = 10
-[[menu.main]]
-  identifier = "sobre"
-  name = "Sobre"
-  url = "/sobre/"
-  weight = 20

@@ -9,6 +9,7 @@
   var nodes = window.LAB_NODES;
   if (!nodes || !nodes.length) return;
   var n = nodes.length;
+  var i18n = window.LAB_I18N || { step: 'Etapa', of: 'de' };
 
   var groups = Array.prototype.slice.call(svg.querySelectorAll('.lab-node'));
   var segs   = Array.prototype.slice.call(svg.querySelectorAll('.lab-seg'));
@@ -63,7 +64,7 @@
       lastActive = active;
       pulse.setAttribute('cx', pts[active].x);
       pulse.setAttribute('cy', pts[active].y);
-      elStep.textContent = 'Etapa ' + pad2(active + 1) + ' de ' + pad2(n);
+      elStep.textContent = i18n.step + ' ' + pad2(active + 1) + ' ' + i18n.of + ' ' + pad2(n);
       elTitle.textContent = nodes[active].label;
       elBody.textContent = nodes[active].desc;
       pagerBtns.forEach(function (btn, i) {

@@ -7,19 +7,20 @@
   (dict "x" 237.7 "y" 313.3 "lx" -22.0 "ly" 40.0  "anchor" "middle")
   (dict "x" 186.8 "y" 156.7 "lx" -36.0 "ly" 4.0   "anchor" "end")
 }}
-{{ $nodes := hugo.Data.lab }}
+{{ $d := index hugo.Data site.Language.Lang }}
+{{ $nodes := $d.lab }}
 {{ $n := len $nodes }}
 <section class="eks-section eks-lab" id="lab" style="background:var(--elevated)">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">Pesquisa &amp; desenvolvimento</span>
+      <span class="eks-section-kicker">{{ i18n "lab_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">Consultoria que opera como laboratório.</h2>
-    <p class="eks-section-sub">A inteligência que acumulamos atendendo clientes alimenta diretamente nosso trabalho de P&amp;D. Cada cliente nos torna melhores em identificar padrões. Cada padrão vira pesquisa, ferramenta ou produto.</p>
+    <h2 class="eks-section-title">{{ i18n "lab_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "lab_sub" }}</p>
 
     <div class="eks-lab-loop">
       <div class="eks-lab-svg-wrap">
-        <div class="eks-lab-caption">Modelo de operação · ciclo contínuo</div>
+        <div class="eks-lab-caption">{{ i18n "lab_caption" }}</div>
         <svg viewBox="0 0 640 400" class="eks-lab-svg" id="lab-svg" aria-hidden="true">
           <defs>
             <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
@@ -67,15 +68,15 @@
       </div>
 
       <div class="eks-lab-detail">
-        <div class="eks-lab-detail-step" id="lab-step">Etapa 01 de {{ printf "%02d" $n }}</div>
+        <div class="eks-lab-detail-step" id="lab-step">{{ i18n "lab_step_word" }} 01 {{ i18n "lab_of_word" }} {{ printf "%02d" $n }}</div>
         <h3 class="eks-lab-detail-h" id="lab-title">{{ (index $nodes 0).label }}</h3>
         <p class="eks-lab-detail-body" id="lab-body">{{ (index $nodes 0).desc }}</p>
         <p class="eks-lab-detail-foot">
-          É um ciclo, não uma linha reta. Diferente de empresas puramente de produto, sabemos exatamente qual dor o cliente sente, porque estamos com ele no dia a dia.
+          {{ i18n "lab_foot" }}
         </p>
         <div class="eks-lab-pager" id="lab-pager">
           {{ range $i, $p := $pts }}
-            <button class="eks-lab-pager-dot{{ if eq $i 0 }} active{{ end }}" data-pager="{{ $i }}" aria-label="Ver etapa {{ add $i 1 }}"></button>
+            <button class="eks-lab-pager-dot{{ if eq $i 0 }} active{{ end }}" data-pager="{{ $i }}" aria-label="{{ i18n "lab_pager_aria" }} {{ add $i 1 }}"></button>
           {{ end }}
         </div>
       </div>
@@ -83,6 +84,9 @@
 
     {{/* Dados dos nós para o JS (label + desc). O html/template do Go serializa
          a estrutura para JSON válido automaticamente neste contexto de script. */}}
-    <script>window.LAB_NODES = {{ $nodes }};</script>
+    <script>
+      window.LAB_NODES = {{ $nodes }};
+      window.LAB_I18N = {{ dict "step" (i18n "lab_step_word") "of" (i18n "lab_of_word") }};
+    </script>
   </div>
 </section>

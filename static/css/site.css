@@ -31,6 +31,13 @@ a { color: inherit; }
 .eks-nav-link { font-size: 13px; color: var(--fg3); text-decoration: none; transition: color var(--t-fast); }
 .eks-nav-link:hover, .eks-nav-link.active { color: var(--fg1); }
 .eks-nav-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.eks-nav-lang {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; color: var(--fg3); text-decoration: none;
+  padding: 5px 8px; border: 1px solid var(--border); border-radius: var(--r-sm, 4px);
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+.eks-nav-lang:hover { color: var(--fg1); border-color: var(--fg3); }
 .eks-locale { font-family: var(--mono); font-size: 11px; color: var(--fg3); letter-spacing: .04em; cursor: pointer; }
 .eks-locale.active { color: var(--fg1); font-weight: 700; }
 

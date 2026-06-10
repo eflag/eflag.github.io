@@ -1,0 +1,11 @@
+# English translation of data/pt/lab.yaml. Keep both files in sync.
+- label: "Services"
+  desc: "Consulting engagements: maturity assessments, threat modeling, AppSec Engineering, pentesting. Projects with defined scope and deliverables."
+- label: "Intelligence"
+  desc: "Every client makes us better at spotting patterns. Recurring flaws, implementation anti-patterns and process gaps become systematized knowledge."
+- label: "R&D"
+  desc: "Patterns become applied research. Responsible disclosure of CVEs, whitepapers, internal tools that let the team operate faster."
+- label: "Product"
+  desc: "Consolidated R&D becomes product. Internal tools become commercial capabilities: automation, dashboards, integrations with the client's pipeline."
+- label: "Better services"
+  desc: "Our own products feed back into the services practice, which delivers more per engagement. The cycle restarts with more technical depth."

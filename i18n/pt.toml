@@ -1,0 +1,161 @@
+# Strings de interface dos templates (pt). Espelhar chaves em i18n/en.toml.
+
+# Nav
+[nav_talk]
+other = "Falar com a gente"
+
+# Hero
+[hero_eyebrow]
+other = "Application Security Labs"
+[hero_sub]
+other = "Um laboratório que une consultoria especializada, pesquisa técnica e desenvolvimento de produtos. Engajamentos com escopo, método e entrega definidos, do assessment ao ataque real."
+[hero_btn_specialist]
+other = "Falar com um especialista"
+[hero_btn_products]
+other = "Ver produtos →"
+[hero_meta1_label]
+other = "Atuação"
+[hero_meta1_val]
+other = "Consultoria · Pesquisa · Produto"
+[hero_meta2_label]
+other = "Domínios"
+[hero_meta2_val]
+other = "Web · API · LLM · Supply chain"
+
+# Problema
+[problem_kicker]
+other = "O que resolvemos"
+[problem_title]
+other = "Três problemas simultâneos. Uma resposta."
+[problem_sub]
+other = "A camada de aplicação é hoje o maior vetor de ataque. E quem precisa proteger esse vetor enfrenta três limitações ao mesmo tempo."
+
+# Serviços
+[services_kicker]
+other = "Serviços profissionais"
+[services_title]
+other = "Do diagnóstico à implementação."
+[services_sub]
+other = "Medimos a maturidade, entregamos o roadmap e colocamos engenheiros para executá-lo. Validamos com ataque real e capacitamos seu time para sustentar."
+
+# Frentes de pesquisa
+[emerging_kicker]
+other = "Frentes de pesquisa"
+[emerging_title]
+other = "Onde o mercado ainda não tem resposta consolidada."
+[emerging_sub]
+other = "Duas frentes de pesquisa aplicada que sustentam os serviços e os produtos. O que descobrimos no laboratório vira metodologia de engajamento."
+
+# Lab / ciclo
+[lab_kicker]
+other = "Pesquisa & desenvolvimento"
+[lab_title]
+other = "Consultoria que opera como laboratório."
+[lab_sub]
+other = "A inteligência que acumulamos atendendo clientes alimenta diretamente nosso trabalho de P&D. Cada cliente nos torna melhores em identificar padrões. Cada padrão vira pesquisa, ferramenta ou produto."
+[lab_caption]
+other = "Modelo de operação · ciclo contínuo"
+[lab_step_word]
+other = "Etapa"
+[lab_of_word]
+other = "de"
+[lab_foot]
+other = "É um ciclo, não uma linha reta. Diferente de empresas puramente de produto, sabemos exatamente qual dor o cliente sente, porque estamos com ele no dia a dia."
+[lab_pager_aria]
+other = "Ver etapa"
+
+# Regulatória
+[compl_kicker]
+other = "Por que agora"
+[compl_title]
+other = "Conformidade regulatória deixou de ser opcional."
+[compl_sub]
+other = "Reguladores brasileiros e padrões internacionais convergem para exigir desenvolvimento seguro auditável. Quem espera, paga em retrabalho."
+[compl_foot]
+other = "Os mesmos frameworks do add-on regulatório dos assessments: contratando o mapeamento, o roadmap técnico já nasce como plano de adequação."
+[compl_foot_link]
+other = "Ver serviços de diagnóstico →"
+
+# Mercado
+[metrics_kicker]
+other = "Mercado · 2024 → 2033"
+[metrics_title]
+other = "A demanda já está aqui."
+[metrics_sub]
+other = "Dados públicos consolidados de relatórios de mercado e fontes setoriais."
+
+# CTA
+[cta_title]
+other = "Pronto para começar pelo diagnóstico?"
+[cta_sub]
+other = "15 minutos com um especialista. Sem pré-venda, sem deck genérico. A gente entende o ciclo e propõe o primeiro passo."
+[cta_btn]
+other = "Agendar conversa"
+
+# Footer
+[footer_blurb]
+other = "Application Security Labs. Consultoria, pesquisa e produtos para times de engenharia que tratam segurança como disciplina."
+[footer_products]
+other = "Produtos"
+[footer_content]
+other = "Conteúdo"
+[footer_about]
+other = "Sobre"
+
+# Página de produtos
+[prd_eyebrow]
+other = "Produtos"
+[prd_title]
+other = "Produtos eFlag."
+[prd_sub]
+other = "Ferramentas que automatizam padrões vistos repetidamente nos nossos engajamentos. Cada produto nasce de um problema real, validado em campo antes de virar capacidade comercial."
+[prd_tooltip]
+other = "Produto em pesquisa e desenvolvimento internos. Em refinamento ativo com clientes-piloto."
+[prd_model_kicker]
+other = "Modelo de produto"
+[prd_model_title]
+other = "Produto não é pivô. É o ciclo se completando."
+[prd_model_sub]
+other = "A ferramenta nasce quando um problema se repete em vários clientes a ponto de virar dor sistemática. Aí a gente automatiza, dá nome e abre acesso."
+[prd_loop1_title]
+other = "Dor recorrente."
+[prd_loop1_body]
+other = "Mesmo achado aparece em três, cinco, dez clientes diferentes. O time interno padroniza a forma de resolver e o tempo cai pela metade."
+[prd_loop2_title]
+other = "Ferramenta interna."
+[prd_loop2_body]
+other = "O padrão vira script, depois ferramenta de uso interno do time. Roda em todos os engajamentos e absorve casos novos a cada cliente."
+[prd_loop3_title]
+other = "Produto comercial."
+[prd_loop3_body]
+other = "A ferramenta amadurece, ganha interface e empacotamento. Vira capacidade que o cliente roda sozinho dentro do pipeline dele."
+[prd_cta_title]
+other = "Quer conhecer nossos produtos?"
+[prd_cta_sub]
+other = "Entre em contato para estar preparado para essa nova era de segurança em IA e supply chain attacks."
+[prd_cta_btn]
+other = "Falar com a gente"
+
+# Página sobre
+[sobre_eyebrow]
+other = "Sobre a eFlag"
+[sobre_h1]
+other = "Engenheiros que viveram o ciclo de desenvolvimento e sabem como protegê-lo."
+[sobre_sub]
+other = "Não somos consultores que aprenderam segurança. Somos um time de AppSec engineers com experiência real em desenvolvimento de software em empresas de alto impacto: fintechs, meios de comunicação, plataformas digitais."
+[sobre_manifesto_kicker]
+other = "Manifesto"
+[sobre_manifesto_title]
+other = "Segurança de aplicações não é etapa do desenvolvimento."
+[sobre_manifesto_p1]
+other = "É uma disciplina que precisa viver dentro dos times, nos processos e nas ferramentas do dia a dia. Quando segurança chega só no reteste, o que sobra é dívida. E a dívida de segurança vence em forma de incidente público."
+[sobre_manifesto_p2]
+other = "A eFlag nasceu de uma convicção: para resolver AppSec de verdade, é preciso entender o fluxo de engenharia por dentro. Por isso o modelo é consultoria + pesquisa + produto. E por isso a inteligência circula entre as três pernas o tempo todo."
+[sobre_manifesto_p3]
+other = "O que volta para o cliente é metodologia, não segredo. O que descobrimos no campo, publicamos."
+[sobre_principles_kicker]
+other = "Princípios de trabalho"
+[sobre_principles_title]
+other = "Como pensamos AppSec na prática."
+[sobre_principles_sub]
+other = "Seis princípios que orientam todo engajamento, do diagnóstico de uma semana ao programa de dois anos."

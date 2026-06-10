@@ -1,9 +1,10 @@
 {{ define "main" }}
+  {{ $d := index hugo.Data site.Language.Lang }}
   <section class="eks-sobre-hero">
     <div class="page">
-      <div class="eks-hero-eyebrow">Sobre a eFlag</div>
-      <h1>Engenheiros que viveram o ciclo de desenvolvimento e sabem como protegê-lo.</h1>
-      <p>Não somos consultores que aprenderam segurança. Somos um time de AppSec engineers com experiência real em desenvolvimento de software em empresas de alto impacto: fintechs, meios de comunicação, plataformas digitais.</p>
+      <div class="eks-hero-eyebrow">{{ i18n "sobre_eyebrow" }}</div>
+      <h1>{{ i18n "sobre_h1" }}</h1>
+      <p>{{ i18n "sobre_sub" }}</p>
     </div>
   </section>
 
@@ -11,18 +12,18 @@
     <div class="page" style="display:grid;grid-template-columns:220px 1fr;gap:64px;align-items:start">
       <div>
         <div class="eks-section-num">01</div>
-        <div class="eks-section-kicker" style="margin-top:8px">Manifesto</div>
+        <div class="eks-section-kicker" style="margin-top:8px">{{ i18n "sobre_manifesto_kicker" }}</div>
       </div>
       <div style="max-width:680px">
-        <h2 class="eks-section-title" style="margin-top:0">Segurança de aplicações não é etapa do desenvolvimento.</h2>
+        <h2 class="eks-section-title" style="margin-top:0">{{ i18n "sobre_manifesto_title" }}</h2>
         <p style="font-size:17px;line-height:1.7;color:var(--fg2);margin:24px 0">
-          É uma disciplina que precisa viver dentro dos times, nos processos e nas ferramentas do dia a dia. Quando segurança chega só no reteste, o que sobra é dívida. E a dívida de segurança vence em forma de incidente público.
+          {{ i18n "sobre_manifesto_p1" }}
         </p>
         <p style="font-size:17px;line-height:1.7;color:var(--fg2);margin:0 0 24px">
-          A eFlag nasceu de uma convicção: para resolver AppSec de verdade, é preciso entender o fluxo de engenharia por dentro. Por isso o modelo é consultoria + pesquisa + produto. E por isso a inteligência circula entre as três pernas o tempo todo.
+          {{ i18n "sobre_manifesto_p2" }}
         </p>
         <p style="font-size:17px;line-height:1.7;color:var(--fg2);margin:0">
-          O que volta para o cliente é metodologia, não segredo. O que descobrimos no campo, publicamos.
+          {{ i18n "sobre_manifesto_p3" }}
         </p>
       </div>
     </div>
@@ -32,12 +33,12 @@
     <div class="page">
       <div class="eks-section-head">
         <span class="eks-section-num">02</span>
-        <span class="eks-section-kicker">Princípios de trabalho</span>
+        <span class="eks-section-kicker">{{ i18n "sobre_principles_kicker" }}</span>
       </div>
-      <h2 class="eks-section-title">Como pensamos AppSec na prática.</h2>
-      <p class="eks-section-sub">Seis princípios que orientam todo engajamento, do diagnóstico de uma semana ao programa recorrente de dois anos.</p>
+      <h2 class="eks-section-title">{{ i18n "sobre_principles_title" }}</h2>
+      <p class="eks-section-sub">{{ i18n "sobre_principles_sub" }}</p>
       <div class="eks-principles">
-        {{ range hugo.Data.principles }}
+        {{ range $d.principles }}
           <div class="eks-principle">
             <i class="ti {{ .icon }}"></i>
             <h3>{{ .title }}</h3>

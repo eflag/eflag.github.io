@@ -5,6 +5,9 @@
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ else }}{{ $title = printf "%s · eFlag" .Title }}{{ end }}
   <title>{{ $title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+  {{ end }}
   <link rel="icon" href="/assets/flag-color.png">
   <link rel="stylesheet" href="/css/site.css">
   <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">

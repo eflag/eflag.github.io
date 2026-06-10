@@ -1,12 +1,13 @@
+{{ $d := index hugo.Data site.Language.Lang }}
 <section class="eks-section" id="emergente">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">Frentes de pesquisa</span>
+      <span class="eks-section-kicker">{{ i18n "emerging_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">Onde o mercado ainda não tem resposta consolidada.</h2>
-    <p class="eks-section-sub">Duas frentes de pesquisa aplicada que sustentam os serviços e os produtos. O que descobrimos no laboratório vira metodologia de engajamento.</p>
+    <h2 class="eks-section-title">{{ i18n "emerging_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "emerging_sub" }}</p>
     <div class="eks-emerge">
-      {{ range hugo.Data.emerging }}
+      {{ range $d.emerging }}
         <div class="eks-emerge-cell">
           <span class="eks-emerge-tag">{{ .tag }}</span>
           <h3>{{ .title }}</h3>

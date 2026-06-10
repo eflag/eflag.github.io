@@ -3,20 +3,20 @@
     <div class="eks-foot-grid">
       <div class="eks-foot-brand">
         <div class="eks-brand"><img src="/assets/flag-color.png" width="20" height="20" alt="eflag" style="display:block"> eflag</div>
-        <p>Application Security Labs. Consultoria, pesquisa e produtos para times de engenharia que tratam segurança como disciplina.</p>
+        <p>{{ i18n "footer_blurb" }}</p>
       </div>
       <div class="eks-foot-col">
-        <h4>Produtos</h4>
-        <a href="/produtos/">eflag Review</a>
-        <a href="/produtos/">eflag Supply Chain Guard</a>
+        <h4>{{ i18n "footer_products" }}</h4>
+        <a href="{{ relLangURL "produtos/" }}">eflag Review</a>
+        <a href="{{ relLangURL "produtos/" }}">eflag Supply Chain Guard</a>
       </div>
       <div class="eks-foot-col">
-        <h4>Conteúdo</h4>
+        <h4>{{ i18n "footer_content" }}</h4>
         <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">github.com/eflag</a>
       </div>
       <div class="eks-foot-col">
         <h4>eFlag</h4>
-        <a href="/sobre/">Sobre</a>
+        <a href="{{ relLangURL "sobre/" }}">{{ i18n "footer_about" }}</a>
         <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
       </div>
     </div>

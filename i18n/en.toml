@@ -1,0 +1,161 @@
+# Template UI strings (en). Mirror keys with i18n/pt.toml.
+
+# Nav
+[nav_talk]
+other = "Talk to us"
+
+# Hero
+[hero_eyebrow]
+other = "Application Security Labs"
+[hero_sub]
+other = "A lab that combines specialized consulting, technical research and product development. Engagements with defined scope, method and deliverables, from assessment to real attack."
+[hero_btn_specialist]
+other = "Talk to a specialist"
+[hero_btn_products]
+other = "See products →"
+[hero_meta1_label]
+other = "What we do"
+[hero_meta1_val]
+other = "Consulting · Research · Product"
+[hero_meta2_label]
+other = "Domains"
+[hero_meta2_val]
+other = "Web · API · LLM · Supply chain"
+
+# Problem
+[problem_kicker]
+other = "What we solve"
+[problem_title]
+other = "Three simultaneous problems. One answer."
+[problem_sub]
+other = "The application layer is now the biggest attack vector. And whoever needs to protect it faces three limitations at once."
+
+# Services
+[services_kicker]
+other = "Professional services"
+[services_title]
+other = "From diagnosis to implementation."
+[services_sub]
+other = "We measure maturity, deliver the roadmap and put engineers in to execute it. We validate with real attack and train your team to sustain it."
+
+# Research fronts
+[emerging_kicker]
+other = "Research fronts"
+[emerging_title]
+other = "Where the market has no consolidated answer yet."
+[emerging_sub]
+other = "Two applied research fronts that back our services and products. What we discover in the lab becomes engagement methodology."
+
+# Lab / cycle
+[lab_kicker]
+other = "Research & development"
+[lab_title]
+other = "Consulting that runs like a laboratory."
+[lab_sub]
+other = "The intelligence we accumulate serving clients feeds directly into our R&D work. Every client makes us better at spotting patterns. Every pattern becomes research, tooling or product."
+[lab_caption]
+other = "Operating model · continuous cycle"
+[lab_step_word]
+other = "Step"
+[lab_of_word]
+other = "of"
+[lab_foot]
+other = "It's a cycle, not a straight line. Unlike pure product companies, we know exactly what pain the client feels, because we're with them day to day."
+[lab_pager_aria]
+other = "View step"
+
+# Regulatory
+[compl_kicker]
+other = "Why now"
+[compl_title]
+other = "Regulatory compliance is no longer optional."
+[compl_sub]
+other = "Brazilian regulators and international standards converge on requiring auditable secure development. Those who wait pay in rework."
+[compl_foot]
+other = "The same frameworks as the assessments' regulatory add-on: with the mapping included, the technical roadmap is born as a compliance plan."
+[compl_foot_link]
+other = "See diagnosis services →"
+
+# Market
+[metrics_kicker]
+other = "Market · 2024 → 2033"
+[metrics_title]
+other = "The demand is already here."
+[metrics_sub]
+other = "Public data consolidated from market reports and industry sources."
+
+# CTA
+[cta_title]
+other = "Ready to start with a diagnosis?"
+[cta_sub]
+other = "15 minutes with a specialist. No pre-sales, no generic deck. We understand your cycle and propose the first step."
+[cta_btn]
+other = "Schedule a call"
+
+# Footer
+[footer_blurb]
+other = "Application Security Labs. Consulting, research and products for engineering teams that treat security as a discipline."
+[footer_products]
+other = "Products"
+[footer_content]
+other = "Content"
+[footer_about]
+other = "About"
+
+# Products page
+[prd_eyebrow]
+other = "Products"
+[prd_title]
+other = "eFlag products."
+[prd_sub]
+other = "Tools that automate patterns seen repeatedly in our engagements. Each product is born from a real problem, validated in the field before becoming a commercial capability."
+[prd_tooltip]
+other = "Product in internal research and development. In active refinement with pilot clients."
+[prd_model_kicker]
+other = "Product model"
+[prd_model_title]
+other = "Product is not a pivot. It's the cycle completing itself."
+[prd_model_sub]
+other = "A tool is born when a problem repeats across clients to the point of becoming systematic pain. Then we automate it, name it and open access."
+[prd_loop1_title]
+other = "Recurring pain."
+[prd_loop1_body]
+other = "The same finding shows up in three, five, ten different clients. The internal team standardizes the fix and the time drops by half."
+[prd_loop2_title]
+other = "Internal tool."
+[prd_loop2_body]
+other = "The pattern becomes a script, then an internal tool. It runs in every engagement and absorbs new cases with each client."
+[prd_loop3_title]
+other = "Commercial product."
+[prd_loop3_body]
+other = "The tool matures, gains an interface and packaging. It becomes a capability the client runs on their own, inside their pipeline."
+[prd_cta_title]
+other = "Want to know our products?"
+[prd_cta_sub]
+other = "Get in touch to be ready for this new era of AI security and supply chain attacks."
+[prd_cta_btn]
+other = "Talk to us"
+
+# About page
+[sobre_eyebrow]
+other = "About eFlag"
+[sobre_h1]
+other = "Engineers who lived the development cycle and know how to protect it."
+[sobre_sub]
+other = "We are not consultants who learned security. We are a team of AppSec engineers with real software development experience in high-impact companies: fintechs, media outlets, digital platforms."
+[sobre_manifesto_kicker]
+other = "Manifesto"
+[sobre_manifesto_title]
+other = "Application security is not a development stage."
+[sobre_manifesto_p1]
+other = "It's a discipline that needs to live inside teams, processes and everyday tools. When security only shows up at retest, what's left is debt. And security debt comes due as a public incident."
+[sobre_manifesto_p2]
+other = "eFlag was born from a conviction: to truly solve AppSec, you need to understand the engineering flow from the inside. That's why the model is consulting + research + product. And that's why intelligence circulates between the three legs all the time."
+[sobre_manifesto_p3]
+other = "What goes back to the client is methodology, not secrets. What we discover in the field, we publish."
+[sobre_principles_kicker]
+other = "Working principles"
+[sobre_principles_title]
+other = "How we think about AppSec in practice."
+[sobre_principles_sub]
+other = "Six principles that guide every engagement, from a one-week diagnosis to a two-year program."

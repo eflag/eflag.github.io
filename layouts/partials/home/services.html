@@ -1,13 +1,14 @@
+{{ $d := index hugo.Data site.Language.Lang }}
 <section class="eks-section" id="servicos">
   <div class="page">
     <div class="eks-section-head">
-      <span class="eks-section-kicker">Serviços profissionais</span>
+      <span class="eks-section-kicker">{{ i18n "services_kicker" }}</span>
     </div>
-    <h2 class="eks-section-title">Do diagnóstico à implementação.</h2>
-    <p class="eks-section-sub">Medimos a maturidade, entregamos o roadmap e colocamos engenheiros para executá-lo. Validamos com ataque real e capacitamos seu time para sustentar.</p>
+    <h2 class="eks-section-title">{{ i18n "services_title" }}</h2>
+    <p class="eks-section-sub">{{ i18n "services_sub" }}</p>
 
     <div class="eks-services">
-      {{ range hugo.Data.services }}
+      {{ range $d.services }}
         <div class="eks-svc-block">
           <div class="eks-svc-block-head">
             <span class="eks-svc-block-tag">{{ .label }}</span>
@@ -19,7 +20,7 @@
                 <div class="ef-ed-idx">{{ .idx }}</div>
                 <h3 class="ef-ed-title">{{ .title }}</h3>
                 <div class="ef-ed-body">{{ .body }}</div>
-                {{ if .link }}<a class="ef-ed-link accent" href="{{ .link }}">{{ .link_label }}</a>{{ end }}
+                {{ if .link }}<a class="ef-ed-link accent" href="{{ relLangURL (strings.TrimPrefix "/" .link) }}">{{ .link_label }}</a>{{ end }}
               </div>
             {{ end }}
             {{ with .addon }}

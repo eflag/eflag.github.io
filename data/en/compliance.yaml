@@ -1,0 +1,13 @@
+# English translation of data/pt/compliance.yaml. Keep both files in sync.
+- norm: "ISO/IEC 27001 · Annex A.14"
+  req: "Secure development policy integrated into the SDLC. Environment separation and code review as mandatory controls."
+  deadline: "In force"
+  urgent: false
+- norm: "PCI DSS 4.0 · Requirement 6"
+  req: "Explicit SSDLC as a requirement. Version 4.0 removes the recommended-best-practice category. It becomes mandatory."
+  deadline: "In force"
+  urgent: false
+- norm: "BACEN CMN 5.274 · BCB 538"
+  req: "Mandatory annual pentest of exposed applications, vulnerability management and a proactive model for regulated institutions."
+  deadline: "March 2026"
+  urgent: true

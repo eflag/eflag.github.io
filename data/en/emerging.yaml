@@ -1,0 +1,17 @@
+# English translation of data/pt/emerging.yaml. Keep both files in sync.
+- tag: "Supply Chain Security"
+  title: "Visibility into what goes into the build."
+  body: "Attacks on the development chain keep growing and the ecosystem still responds case by case. We research malicious package detection, build provenance and pipeline governance. That research is what backs the Software Supply Chain Assessment and eflag Supply Chain Guard."
+  list:
+    - "Typosquatting and malicious package detection"
+    - "Build provenance and SLSA Level 2/3"
+    - "CycloneDX SBOM at scale"
+    - "Repository and GitHub Actions governance"
+- tag: "AI Security"
+  title: "Protection for those who use LLMs, and for those who build with them."
+  body: "Two sides of the same problem: applications that use generative AI and teams that develop with copilots. Research on this front feeds the AI Security Maturity Assessment, threat modeling of LLM flows and pentesting of LLM applications."
+  list:
+    - "Threat modeling of LLM flows"
+    - "Guardrails for agents with tool access"
+    - "Safe copilot usage policies for dev teams"
+    - "Context window exfiltration assessment"
