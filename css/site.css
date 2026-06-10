@@ -31,6 +31,13 @@ a { color: inherit; }
 .eks-nav-link { font-size: 13px; color: var(--fg3); text-decoration: none; transition: color var(--t-fast); }
 .eks-nav-link:hover, .eks-nav-link.active { color: var(--fg1); }
 .eks-nav-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.eks-nav-lang {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; color: var(--fg3); text-decoration: none;
+  padding: 5px 8px; border: 1px solid var(--border); border-radius: var(--r-sm, 4px);
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+.eks-nav-lang:hover { color: var(--fg1); border-color: var(--fg3); }
 .eks-locale { font-family: var(--mono); font-size: 11px; color: var(--fg3); letter-spacing: .04em; cursor: pointer; }
 .eks-locale.active { color: var(--fg1); font-weight: 700; }
 
@@ -107,13 +114,27 @@ body[data-hero-pattern="plain"] .eks-post-head { background-image: none; }
 }
 .eks-section-sub { font-size: 16px; color: var(--fg2); line-height: 1.65; max-width: 640px; margin: 0; }
 
-/* ── SERVICES GRID (editorial) ─────────────────── */
-.eks-services { margin-top: 40px; }
-.eks-services .ef-ed-grid { grid-template-columns: repeat(4, 1fr); }
+/* ── SERVICES BLOCKS (Diagnóstico → Implementação → Validação → Capacitação) ── */
+.eks-services { margin-top: 40px; display: flex; flex-direction: column; gap: 48px; }
 .eks-services .ef-ed-card { padding: 28px 24px 24px; min-height: 220px; }
 .eks-services .ef-ed-idx { margin-bottom: 28px; font-size: 11px; }
-.eks-services .ef-ed-title { font-size: 17px; margin-bottom: 4px; }
+.eks-services .ef-ed-title { font-size: 17px; margin: 0 0 4px; }
 .eks-services .ef-ed-body { font-size: 13px; }
+.eks-svc-block-head { display: flex; align-items: baseline; gap: 20px; margin-bottom: 16px; flex-wrap: wrap; }
+.eks-svc-block-tag { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.eks-svc-block-intro { font-size: 14px; color: var(--fg3); line-height: 1.6; margin: 0; max-width: 640px; }
+.eks-services .eks-svc-grid { grid-template-columns: repeat(3, 1fr); }
+.eks-services .eks-svc-grid-1 { grid-template-columns: 1fr; }
+.eks-services .eks-svc-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.eks-svc-grid-1 .ef-ed-card { min-height: 0; }
+.eks-svc-grid-1 .ef-ed-body { max-width: 720px; }
+.eks-svc-wide { grid-column: span 2; }
+/* Add-on regulatório: card escuro de largura total no fim do grid. */
+.eks-services .eks-svc-addon { grid-column: 1 / -1; background: var(--dark-bg); min-height: 0; padding: 24px; }
+.eks-svc-addon:hover { background: var(--dark-bg); }
+.eks-services .eks-svc-addon .ef-ed-idx { color: var(--accent); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+.eks-svc-addon .ef-ed-title { color: var(--dark-fg1); }
+.eks-svc-addon .ef-ed-body { color: var(--dark-fg2); max-width: 760px; }
 
 /* ── DARK SECTION ──────────────────────────────── */
 .eks-dark {
@@ -217,6 +238,9 @@ body[data-hero-pattern="plain"] .eks-post-head { background-image: none; }
 .eks-compl-req { font-size: 14px; color: var(--dark-fg1); line-height: 1.55; }
 .eks-compl-deadline { font-family: var(--mono); font-size: 11px; color: #888; text-align: right; }
 .eks-compl-deadline.urgent { color: var(--accent); }
+.eks-compl-foot { margin: 24px 0 0; font-size: 14px; color: var(--dark-fg2); line-height: 1.65; max-width: 640px; }
+.eks-compl-foot a { color: var(--accent); text-decoration: none; }
+.eks-compl-foot a:hover { text-decoration: underline; }
 
 /* ── BLOG STRIP ON HOME ───────────────────────── */
 .eks-blog-strip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
@@ -321,10 +345,18 @@ body[data-density="compact"] .eks-post-main p { font-size: 13px; margin-bottom: 
 .eks-post-body code { font-family: var(--mono); font-size: 14px; background: var(--elevated); padding: 1px 6px; border-radius: 4px; color: var(--fg1); }
 .eks-post-body pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
 .eks-post-body blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 0 0 28px; font-size: 19px; line-height: 1.55; color: var(--fg1); font-weight: 500; }
+.eks-post-body blockquote p { margin: 0 0 8px; }
+.eks-post-body blockquote p:last-child { margin: 0; }
+.eks-post-body table { width: 100%; border-collapse: collapse; margin: 0 0 28px; font-size: 14px; }
+.eks-post-body th { font-family: var(--mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--fg3); text-align: left; padding: 10px 14px; background: var(--sunken); border: 1px solid var(--border); }
+.eks-post-body td { padding: 10px 14px; border: 1px solid var(--border); color: var(--fg2); line-height: 1.55; vertical-align: top; }
+.eks-post-body td code { white-space: nowrap; }
 .eks-post-body .callout { background: var(--elevated); border: 1px solid var(--border); border-radius: var(--r-md); padding: 18px 22px; margin: 0 0 28px; display: flex; gap: 14px; }
 .eks-post-body .callout .ti { color: var(--accent); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .eks-post-body .callout p { font-size: 14px; line-height: 1.6; margin: 0; color: var(--fg2); }
+.eks-post-body img { max-width: 100%; height: auto; display: block; }
 .eks-post-body figure { margin: 0 0 32px; }
+.eks-post-body figure img { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px; width: 100%; }
 .eks-post-body figcaption { font-family: var(--mono); font-size: 11px; color: var(--fg4); margin-top: 10px; letter-spacing: .04em; }
 .eks-post-body .severity-card { border: 1px solid var(--border); border-radius: var(--r-md); padding: 18px 22px; margin: 0 0 28px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; background: var(--surface); }
 .eks-post-body .severity-card .lbl { font-family: var(--mono); font-size: 10px; color: var(--fg4); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
@@ -587,7 +619,10 @@ body[data-density="compact"] .eks-post-main p { font-size: 13px; margin-bottom: 
   .eks-hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .eks-hero-flag { min-height: 320px; aspect-ratio: 5 / 3; }
   .eks-hero-meta { grid-template-columns: repeat(2, 1fr); }
-  .eks-services .ef-ed-grid { grid-template-columns: repeat(2, 1fr); }
+  .eks-services .eks-svc-grid,
+  .eks-services .eks-svc-grid-2 { grid-template-columns: 1fr; }
+  .eks-svc-wide { grid-column: auto; }
+  .eks-services .ef-ed-card { min-height: 0; }
   .eks-dark-grid { grid-template-columns: 1fr; }
   .eks-metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .eks-news-grid { grid-template-columns: 1fr; }
