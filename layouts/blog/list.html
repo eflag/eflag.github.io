@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <section class="eks-blog-hero">
+    <div class="page">
+      <h1>{{ i18n "blog_h1" }}</h1>
+      <p>{{ i18n "blog_sub" }}</p>
+    </div>
+  </section>
+
+  <section class="eks-section" style="border-bottom:none;padding-top:0">
+    <div class="page">
+      <div class="eks-blog-list">
+        {{ range .Pages.ByDate.Reverse }}
+          <a href="{{ .RelPermalink }}" class="eks-post-row">
+            <div class="eks-post-date">
+              <span class="day">{{ .Date.Format "02" }}</span>
+              <span class="month">{{ .Date | time.Format "Jan 2006" }}</span>
+            </div>
+            <div class="eks-post-main">
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Description }}</p>
+              <div class="eks-post-tags">
+                {{ with .Params.category }}<span class="tag">{{ . }}</span>{{ end }}
+                {{ range first 3 .Params.tags }}<span>{{ . }}</span>{{ end }}
+              </div>
+            </div>
+            <div class="eks-post-aside">
+              <span class="read">{{ .ReadingTime }} {{ i18n "blog_min_read" }}</span>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

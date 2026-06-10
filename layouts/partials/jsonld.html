@@ -30,3 +30,19 @@
       "itemListElement" $offers)) -}}
 {{- end -}}
 <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- /* Artigos do blog: BlogPosting referenciando a Organization como publisher. */ -}}
+{{- if and .IsPage (eq .Section "blog") -}}
+  {{- $post := dict
+      "@context" "https://schema.org"
+      "@type" "BlogPosting"
+      "headline" .Title
+      "description" .Description
+      "datePublished" (.Date.Format "2006-01-02")
+      "dateModified" (.Lastmod.Format "2006-01-02")
+      "inLanguage" site.Language.LanguageCode
+      "mainEntityOfPage" .Permalink
+      "author" (dict "@type" "Person" "name" (.Params.author | default "eFlag Labs"))
+      "publisher" (dict "@id" $orgId)
+  -}}
+  <script type="application/ld+json">{{ $post | jsonify | safeJS }}</script>
+{{- end -}}

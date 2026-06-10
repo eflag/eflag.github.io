@@ -102,6 +102,18 @@ other = "Content"
 [footer_about]
 other = "About"
 
+# Blog
+[blog_h1]
+other = "Notes from the lab."
+[blog_sub]
+other = "What we discover in the field, we publish. Methodology, research and practice in AppSec and AI security."
+[blog_back]
+other = "Back to the blog"
+[blog_min_read]
+other = "min read"
+[blog_related]
+other = "Keep reading"
+
 # Products page
 [prd_eyebrow]
 other = "Products"

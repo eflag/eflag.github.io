@@ -345,10 +345,18 @@ body[data-density="compact"] .eks-post-main p { font-size: 13px; margin-bottom: 
 .eks-post-body code { font-family: var(--mono); font-size: 14px; background: var(--elevated); padding: 1px 6px; border-radius: 4px; color: var(--fg1); }
 .eks-post-body pre code { background: none; padding: 0; color: inherit; font-size: inherit; }
 .eks-post-body blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 24px; margin: 0 0 28px; font-size: 19px; line-height: 1.55; color: var(--fg1); font-weight: 500; }
+.eks-post-body blockquote p { margin: 0 0 8px; }
+.eks-post-body blockquote p:last-child { margin: 0; }
+.eks-post-body table { width: 100%; border-collapse: collapse; margin: 0 0 28px; font-size: 14px; }
+.eks-post-body th { font-family: var(--mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--fg3); text-align: left; padding: 10px 14px; background: var(--sunken); border: 1px solid var(--border); }
+.eks-post-body td { padding: 10px 14px; border: 1px solid var(--border); color: var(--fg2); line-height: 1.55; vertical-align: top; }
+.eks-post-body td code { white-space: nowrap; }
 .eks-post-body .callout { background: var(--elevated); border: 1px solid var(--border); border-radius: var(--r-md); padding: 18px 22px; margin: 0 0 28px; display: flex; gap: 14px; }
 .eks-post-body .callout .ti { color: var(--accent); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
 .eks-post-body .callout p { font-size: 14px; line-height: 1.6; margin: 0; color: var(--fg2); }
+.eks-post-body img { max-width: 100%; height: auto; display: block; }
 .eks-post-body figure { margin: 0 0 32px; }
+.eks-post-body figure img { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px; width: 100%; }
 .eks-post-body figcaption { font-family: var(--mono); font-size: 11px; color: var(--fg4); margin-top: 10px; letter-spacing: .04em; }
 .eks-post-body .severity-card { border: 1px solid var(--border); border-radius: var(--r-md); padding: 18px 22px; margin: 0 0 28px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; background: var(--surface); }
 .eks-post-body .severity-card .lbl { font-family: var(--mono); font-size: 10px; color: var(--fg4); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }

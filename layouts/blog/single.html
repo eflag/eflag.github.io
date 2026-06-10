@@ -1,0 +1,41 @@
+{{ define "main" }}
+  <section class="eks-post-head">
+    <div class="page-narrow">
+      <a href="{{ .Parent.RelPermalink }}" class="eks-post-back"><i class="ti ti-arrow-left"></i> {{ i18n "blog_back" }}</a>
+      {{ with .Params.category }}<div class="eks-post-cat">{{ . }}</div>{{ end }}
+      <h1 class="eks-post-h1">{{ .Title }}</h1>
+      {{ with .Description }}<p class="eks-post-dek">{{ . }}</p>{{ end }}
+      <div class="eks-post-byline">
+        <span class="author">{{ .Params.author | default "eFlag Labs" }}</span>
+        <span class="sep">·</span>
+        <span>{{ .Date | time.Format ":date_long" }}</span>
+        <span class="sep">·</span>
+        <span>{{ .ReadingTime }} {{ i18n "blog_min_read" }}</span>
+      </div>
+    </div>
+  </section>
+
+  <article class="eks-post-body">
+    <div class="page-narrow">
+      {{ .Content }}
+    </div>
+  </article>
+
+  {{ $related := where (where .Site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink | first 3 }}
+  {{ with $related }}
+    <section class="eks-related">
+      <div class="page">
+        <h2 class="eks-related-h">{{ i18n "blog_related" }}</h2>
+        <div class="eks-related-grid">
+          {{ range . }}
+            <a href="{{ .RelPermalink }}" class="eks-related-card">
+              {{ with .Params.category }}<span class="eks-related-cat">{{ . }}</span>{{ end }}
+              <h4>{{ .Title }}</h4>
+              <span class="eks-related-meta">{{ .Date | time.Format ":date_long" }} · {{ .ReadingTime }} {{ i18n "blog_min_read" }}</span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

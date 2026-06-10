@@ -21,6 +21,11 @@ defaultContentLanguage = "pt"
     pageRef = "/produtos"
     weight = 10
   [[languages.pt.menus.main]]
+    identifier = "blog"
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 15
+  [[languages.pt.menus.main]]
     identifier = "sobre"
     name = "Sobre"
     pageRef = "/sobre"
@@ -37,6 +42,11 @@ defaultContentLanguage = "pt"
     name = "Products"
     pageRef = "/produtos"
     weight = 10
+  [[languages.en.menus.main]]
+    identifier = "blog"
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 15
   [[languages.en.menus.main]]
     identifier = "sobre"
     name = "About"
