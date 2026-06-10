@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
   unsafe = true
 
 [params]
-  description = "Um laboratório que une serviços profissionais, pesquisa técnica e desenvolvimento de produtos de Application Security."
+  description = "Application Security Lab brasileiro: assessments de maturidade de AppSec e IA, AppSec Engineering, pentest web, API e LLM, secure code review e treinamento de devs. Serviços, pesquisa e produtos."
   email = "contato@eflag.io"
   github = "https://github.com/eflag"
 
