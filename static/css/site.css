@@ -235,6 +235,9 @@ body[data-hero-pattern="plain"] .eks-post-head { background-image: none; }
 .eks-compl-req { font-size: 14px; color: var(--dark-fg1); line-height: 1.55; }
 .eks-compl-deadline { font-family: var(--mono); font-size: 11px; color: #888; text-align: right; }
 .eks-compl-deadline.urgent { color: var(--accent); }
+.eks-compl-foot { margin: 24px 0 0; font-size: 14px; color: var(--dark-fg2); line-height: 1.65; max-width: 640px; }
+.eks-compl-foot a { color: var(--accent); text-decoration: none; }
+.eks-compl-foot a:hover { text-decoration: underline; }
 
 /* ── BLOG STRIP ON HOME ───────────────────────── */
 .eks-blog-strip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 40px; }
