@@ -12,7 +12,7 @@
   body: "Serviços alimentam pesquisa. Pesquisa vira produto. Produto torna serviço mais preciso. É um ciclo, não uma linha reta."
 - icon: "ti-bolt"
   title: "Velocidade não é inimiga."
-  body: "Nosso modelo opera no ritmo de release do cliente. Plannings, refinements, reviews. Entramos antes do código, não depois."
+  body: "Projetos que operam no ritmo de release do cliente, sem travar a esteira de quem desenvolve. Entramos antes do código, não depois."
 - icon: "ti-shield-check"
   title: "Sinal sobre ruído."
   body: "Pipeline de segurança que gera 14.000 alertas é pipeline que ninguém olha. Configuramos para gerar 40, e fazer o time agir nos 40."
