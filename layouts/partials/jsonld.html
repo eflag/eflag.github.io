@@ -1,0 +1,32 @@
+{{- /* JSON-LD: Organization em todas as páginas; na home, soma o catálogo
+     de serviços gerado de data/{lang}/services.yaml. Sem claims inventados:
+     só dados que já existem no site. */ -}}
+{{- $orgId := printf "%s#organization" site.BaseURL -}}
+{{- $org := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "@id" $orgId
+    "name" "eFlag Application Security Labs"
+    "alternateName" "eFlag"
+    "url" site.BaseURL
+    "logo" (absURL "assets/eflag-color-black.png")
+    "email" site.Params.email
+    "sameAs" (slice site.Params.github)
+    "address" (dict "@type" "PostalAddress" "addressLocality" "São Paulo" "addressCountry" "BR")
+-}}
+{{- if .IsHome -}}
+  {{- $d := index hugo.Data site.Language.Lang -}}
+  {{- $offers := slice -}}
+  {{- range $d.services -}}
+    {{- range .cards -}}
+      {{- $offers = $offers | append (dict
+          "@type" "Offer"
+          "itemOffered" (dict "@type" "Service" "name" .title "description" .body "serviceType" "Application Security")) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $org = merge $org (dict "hasOfferCatalog" (dict
+      "@type" "OfferCatalog"
+      "name" (i18n "services_kicker")
+      "itemListElement" $offers)) -}}
+{{- end -}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>

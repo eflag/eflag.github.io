@@ -8,6 +8,7 @@
   {{ range .Translations }}
     <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
   {{ end }}
+  {{ partial "jsonld.html" . }}
   <link rel="icon" href="/assets/flag-color.png">
   <link rel="stylesheet" href="/css/site.css">
   <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
