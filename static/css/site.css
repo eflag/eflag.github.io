@@ -122,16 +122,12 @@ body[data-hero-pattern="plain"] .eks-post-head { background-image: none; }
 .eks-svc-grid-1 .ef-ed-card { min-height: 0; }
 .eks-svc-grid-1 .ef-ed-body { max-width: 720px; }
 .eks-svc-wide { grid-column: span 2; }
-.eks-svc-callout {
-  margin-top: 16px;
-  padding: 18px 24px;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--r-lg);
-  background: var(--elevated);
-}
-.eks-svc-callout-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: .12em; text-transform: uppercase; }
-.eks-svc-callout p { margin: 6px 0 0; font-size: 13.5px; color: var(--fg2); line-height: 1.6; }
+/* Add-on regulatório: card escuro de largura total no fim do grid. */
+.eks-services .eks-svc-addon { grid-column: 1 / -1; background: var(--dark-bg); min-height: 0; padding: 24px; }
+.eks-svc-addon:hover { background: var(--dark-bg); }
+.eks-services .eks-svc-addon .ef-ed-idx { color: var(--accent); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+.eks-svc-addon .ef-ed-title { color: var(--dark-fg1); }
+.eks-svc-addon .ef-ed-body { color: var(--dark-fg2); max-width: 760px; }
 
 /* ── DARK SECTION ──────────────────────────────── */
 .eks-dark {

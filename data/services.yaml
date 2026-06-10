@@ -2,11 +2,14 @@
 # Diagnóstico → Implementação → Validação → Capacitação.
 # `wide: true` destaca o card (span 2 colunas no grid de 3).
 # `link`/`link_label` apontam o serviço para o produto relacionado.
+# `addon` vira um card escuro de largura total no fim do grid do bloco.
 - key: "diagnostico"
   label: "Diagnóstico"
   intro: "Todo assessment entrega relatório executivo, score de maturidade e um roadmap vivo que seu time atualiza e acompanha evoluir."
-  callout_label: "Instituições reguladas"
-  callout: "Em qualquer assessment, mapeamos os achados para Bacen (CMN 5.274 / BCB 538), ISO 27001 e PCI DSS 4.0. Seu roadmap técnico vira também seu plano de adequação regulatória."
+  addon:
+    tag: "Add-on"
+    title: "Instituições reguladas"
+    body: "Serviço adicional contratável em qualquer assessment, para quem precisa responder ao regulador: mapeamos os achados para Bacen (CMN 5.274 / BCB 538), ISO 27001 e PCI DSS 4.0. O roadmap técnico vira também o plano de adequação regulatória."
   cards:
     - idx: "01"
       title: "AppSec Maturity Assessment"
@@ -19,7 +22,7 @@
       tint: "magenta"
     - idx: "03"
       title: "Threat Modeling"
-      body: "Workshops práticos com produto e engenharia para mapear ameaças por cenário — incluindo fluxos com LLM — e transformar risco real de negócio em backlog priorizado."
+      body: "Workshops práticos com produto e engenharia para mapear ameaças por cenário, incluindo fluxos com LLM, e transformar risco real de negócio em backlog priorizado."
       tint: ""
     - idx: "04"
       title: "Software Supply Chain Assessment"
@@ -29,8 +32,10 @@
       link_label: "Produto relacionado: eflag Supply Chain Guard →"
     - idx: "05"
       title: "Pipeline & Platform Assessment"
-      body: "Raio-X da organização GitHub e das pipelines de CI/CD: branch protection, Actions, segredos e gates de segurança. Roadmap de hardening com foco em sinal, não em ruído."
+      body: "Raio-X do GitHub, GitLab ou da sua plataforma de git, e das pipelines de CI/CD: branch protection, automações, segredos e gates de segurança. Roadmap de hardening com foco em sinal, não em ruído."
       tint: "green"
+      link: "/produtos/#produto-review"
+      link_label: "Produto relacionado: eflag Review →"
 - key: "implementacao"
   label: "Implementação"
   intro: "Consultoria tradicional entrega o relatório e vai embora. A gente fica para construir."
@@ -51,12 +56,10 @@
       title: "Secure Code Review"
       body: "Revisão manual de código crítico por engenheiros que programam: autenticação, autorização, criptografia, integrações e código gerado por IA. Onde SAST não chega."
       tint: ""
-      link: "/produtos/#produto-review"
-      link_label: "Produto relacionado: eflag Review →"
 - key: "capacitacao"
   label: "Capacitação"
   cards:
     - idx: "09"
       title: "Treinamento de Devs"
-      body: "Capacitação prática no que somos especialistas: secure coding no seu stack, OWASP Top 10, segurança de APIs, supply chain e desenvolvimento com LLMs e copilots. Hands-on, com código — não slides genéricos."
+      body: "Capacitação prática no que somos especialistas: secure coding no seu stack, OWASP Top 10, segurança de APIs, supply chain e desenvolvimento com LLMs e copilots. Hands-on, com código, não slides genéricos."
       tint: "green"
