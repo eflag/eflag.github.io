@@ -20,7 +20,7 @@
                 <div class="ef-ed-idx">{{ .idx }}</div>
                 <h3 class="ef-ed-title">{{ .title }}</h3>
                 <div class="ef-ed-body">{{ .body }}</div>
-                {{ if .link }}<a class="ef-ed-link accent" href="{{ relLangURL (strings.TrimPrefix "/" .link) }}">{{ .link_label }}</a>{{ end }}
+                {{ if .link }}<a class="ef-ed-link accent" href="{{ relLangURL (strings.TrimPrefix "/" .link) }}" data-tianji-event="services-product-link" data-tianji-event-service="{{ .idx }}">{{ .link_label }}</a>{{ end }}
               </div>
             {{ end }}
             {{ with .addon }}

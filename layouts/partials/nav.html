@@ -10,9 +10,9 @@
     <div class="eks-nav-right">
       {{/* Alterna para a tradução da página atual; cai na home do outro idioma se não houver. */}}
       {{ range .Translations }}
-        <a href="{{ .RelPermalink }}" class="eks-nav-lang" lang="{{ .Language.LanguageCode }}">{{ .Language.Lang | upper }}</a>
+        <a href="{{ .RelPermalink }}" class="eks-nav-lang" lang="{{ .Language.LanguageCode }}" data-tianji-event="nav-lang-switch" data-tianji-event-to="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
       {{ end }}
-      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-sm">{{ i18n "nav_talk" }}</a>
+      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-sm" data-tianji-event="nav-contact">{{ i18n "nav_talk" }}</a>
     </div>
   </div>
 </header>

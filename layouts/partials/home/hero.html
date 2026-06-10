@@ -7,8 +7,8 @@
         {{ i18n "hero_sub" }}
       </p>
       <div class="eks-hero-actions">
-        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg">{{ i18n "hero_btn_specialist" }}</a>
-        <a href="{{ relLangURL "produtos/" }}" class="ef-btn ef-btn-outline ef-btn-lg">{{ i18n "hero_btn_products" }}</a>
+        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-lg" data-tianji-event="hero-contact">{{ i18n "hero_btn_specialist" }}</a>
+        <a href="{{ relLangURL "produtos/" }}" class="ef-btn ef-btn-outline ef-btn-lg" data-tianji-event="hero-products">{{ i18n "hero_btn_products" }}</a>
       </div>
 
       <div class="eks-hero-meta" style="grid-template-columns:repeat(2,1fr);max-width:640px">
