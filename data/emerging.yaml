@@ -1,14 +1,15 @@
+# Frentes de pesquisa aplicada (P&D) que sustentam os serviços e produtos.
 - tag: "Supply Chain Security"
   title: "Visibilidade sobre o que entra no build."
-  body: "Ataques à cadeia de desenvolvimento são uma das maiores ameaças atuais e seguem crescendo. Quem não vê dependências, pipelines e repositórios em produção fica refém do próximo incidente público."
+  body: "Ataques à cadeia de desenvolvimento seguem crescendo e o ecossistema ainda responde caso a caso. Pesquisamos detecção de pacotes maliciosos, proveniência de build e governança de pipelines. É essa pesquisa que sustenta o Software Supply Chain Assessment e o eflag Supply Chain Guard."
   list:
-    - "Auditoria de dependências e SBOM CycloneDX"
-    - "Build provenance e SLSA Level 2/3"
     - "Detecção de typosquatting e pacotes maliciosos"
+    - "Build provenance e SLSA Level 2/3"
+    - "SBOM CycloneDX em escala"
     - "Governança de repositórios e GitHub Actions"
 - tag: "Segurança com IA"
   title: "Proteção para quem usa LLM, e para quem constrói com LLM."
-  body: "Dois lados: proteção de aplicações que usam IA generativa (prompt injection, vazamento, manipulação de agentes) e segurança no uso diário de copilots pelos times de dev. Só quem entende o fluxo real consegue proteger esse vetor."
+  body: "Dois lados do mesmo problema: aplicações que usam IA generativa e times que desenvolvem com copilots. A pesquisa nessa frente alimenta o AI Security Maturity Assessment, o threat modeling de fluxos com LLM e o pentest de aplicações com LLM."
   list:
     - "Threat modeling de fluxos com LLM"
     - "Guardrails de agentes com acesso a ferramentas"
