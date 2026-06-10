@@ -3,19 +3,34 @@
     <div class="eks-section-head">
       <span class="eks-section-kicker">Serviços profissionais</span>
     </div>
-    <h2 class="eks-section-title">Diagnóstico, contínuo, sob medida.</h2>
-    <p class="eks-section-sub">Engajamentos pontuais ou modelo recorrente. O time se adapta ao seu ritmo de release, não o contrário.</p>
+    <h2 class="eks-section-title">Do diagnóstico à implementação.</h2>
+    <p class="eks-section-sub">Medimos a maturidade, entregamos o roadmap — e colocamos engenheiros para executá-lo. Validamos com ataque real e capacitamos seu time para sustentar.</p>
 
     <div class="eks-services">
-      <div class="ef-ed-grid">
-        {{ range hugo.Data.services }}
-          <div class="ef-ed-card{{ with .tint }} idx-{{ . }}{{ end }}">
-            <div class="ef-ed-idx">{{ .idx }}</div>
-            <div class="ef-ed-title">{{ .title }}</div>
-            <div class="ef-ed-body">{{ .body }}</div>
+      {{ range $block := hugo.Data.services }}
+        <div class="eks-svc-block">
+          <div class="eks-svc-block-head">
+            <span class="eks-svc-block-tag">{{ .label }}</span>
+            {{ with .intro }}<p class="eks-svc-block-intro">{{ . }}</p>{{ end }}
           </div>
-        {{ end }}
-      </div>
+          <div class="ef-ed-grid eks-svc-grid eks-svc-grid-{{ len .cards }}">
+            {{ range .cards }}
+              <div class="ef-ed-card{{ with .tint }} idx-{{ . }}{{ end }}{{ if .wide }} eks-svc-wide{{ end }}">
+                <div class="ef-ed-idx">{{ .idx }}</div>
+                <h3 class="ef-ed-title">{{ .title }}</h3>
+                <div class="ef-ed-body">{{ .body }}</div>
+                {{ if .link }}<a class="ef-ed-link accent" href="{{ .link }}">{{ .link_label }}</a>{{ end }}
+              </div>
+            {{ end }}
+          </div>
+          {{ with .callout }}
+            <div class="eks-svc-callout">
+              <span class="eks-svc-callout-label">{{ $block.callout_label }}</span>
+              <p>{{ . }}</p>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </div>
 </section>
