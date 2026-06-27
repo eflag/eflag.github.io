@@ -11,6 +11,9 @@
   {{ partial "jsonld.html" . }}
   <script async defer src="https://tc.guisso.dev/tracker.js" data-website-id="cmq7cuek2000b11qcmjx5zh3u"></script>
   <link rel="icon" href="/assets/flag-color.png">
-  <link rel="stylesheet" href="/css/site.css">
+  {{/* CSS carregado em ordem de dependência; ?v=<hash> força refresh quando o arquivo muda (anti-cache). */}}
+  {{ range slice "css/colors_and_type.css" "css/ef-components.css" "css/site.css" }}
+    <link rel="stylesheet" href="/{{ . }}?v={{ substr (readFile (printf "static/%s" .) | sha256) 0 10 }}">
+  {{ end }}
   <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
 </head>

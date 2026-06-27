@@ -1,18 +1,39 @@
-<header class="eks-nav">
+<header class="eks-nav" id="eks-nav">
   <div class="page eks-nav-inner">
     <a href="{{ site.Home.RelPermalink }}" class="eks-brand"><img src="/assets/flag-color.png" width="22" height="22" alt="eflag" style="display:block"> eflag</a>
-    <nav class="eks-nav-links">
-      {{ $current := .RelPermalink }}
-      {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="eks-nav-link{{ if hasPrefix $current .URL }} active{{ end }}">{{ .Name }}</a>
-      {{ end }}
-    </nav>
-    <div class="eks-nav-right">
-      {{/* Alterna para a tradução da página atual; cai na home do outro idioma se não houver. */}}
-      {{ range .Translations }}
-        <a href="{{ .RelPermalink }}" class="eks-nav-lang" lang="{{ .Language.LanguageCode }}" data-tianji-event="nav-lang-switch" data-tianji-event-to="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
-      {{ end }}
-      <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-sm" data-tianji-event="nav-contact">{{ i18n "nav_talk" }}</a>
+    <button class="eks-nav-toggle" type="button" aria-label="{{ i18n "nav_menu" | default "Menu" }}" aria-expanded="false" aria-controls="eks-nav-collapse">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="eks-nav-collapse" id="eks-nav-collapse">
+      <nav class="eks-nav-links">
+        {{ $current := .RelPermalink }}
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="eks-nav-link{{ if hasPrefix $current .URL }} active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <div class="eks-nav-right">
+        {{/* Alterna para a tradução da página atual; cai na home do outro idioma se não houver. */}}
+        {{ range .Translations }}
+          <a href="{{ .RelPermalink }}" class="eks-nav-lang" lang="{{ .Language.LanguageCode }}" data-tianji-event="nav-lang-switch" data-tianji-event-to="{{ .Language.Lang }}">{{ .Language.Lang | upper }}</a>
+        {{ end }}
+        <a href="mailto:{{ .Site.Params.email }}" class="ef-btn ef-btn-primary ef-btn-sm" data-tianji-event="nav-contact">{{ i18n "nav_talk" }}</a>
+      </div>
     </div>
   </div>
 </header>
+<script>
+(function () {
+  var nav = document.getElementById('eks-nav');
+  if (!nav) return;
+  var btn = nav.querySelector('.eks-nav-toggle');
+  if (!btn) return;
+  function close() { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('.eks-nav-collapse a').forEach(function (a) {
+    a.addEventListener('click', close);
+  });
+})();
+</script>

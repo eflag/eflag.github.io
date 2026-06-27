@@ -4,6 +4,9 @@
 [nav_talk]
 other = "Falar com a gente"
 
+[nav_menu]
+other = "Menu"
+
 # Hero
 [hero_eyebrow]
 other = "Application Security Labs"
