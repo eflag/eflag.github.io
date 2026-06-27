@@ -1,8 +1,6 @@
 /* ef-components.css, shared component styles for preview cards & UI kits
    Updated to Cold Lab (v4): 4–8px radii, cyan focus ring, brand chips, code blocks. */
 
-@import url('./colors_and_type.css');
-
 /* ========== BUTTONS ========== */
 .ef-btn {
   font-family: var(--font);
